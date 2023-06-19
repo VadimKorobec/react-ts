@@ -1,8 +1,22 @@
 import React from "react";
 
-class TodoList extends React.Component {
+interface IItem {
+  id: string;
+  title: string;
+}
+
+interface IProps {
+  todos: IItem[];
+}
+
+interface IState {
+  count: number;
+}
+
+class TodoList extends React.Component<IProps, IState> {
+  stateHandler() {}
   render(): React.ReactNode {
-    return <div></div>;
+    return null;
   }
 }
 
