@@ -16,10 +16,12 @@ const App: React.FC = () => {
     });
   };
 
+  const todoRemoveHandle = (id: string) => {};
+
   return (
     <div className="App">
       <AddTodo onAddTodo={todoAddHandle} />
-      <TodoList todos={todos} />
+      <TodoList onRemoveTodo={todoRemoveHandle} todos={todos} />
     </div>
   );
 };
