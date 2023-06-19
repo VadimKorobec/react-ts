@@ -8,15 +8,15 @@ const App: React.FC = () => {
   const [todos, setTodos] = useState<IItem[]>([]);
 
   const todoAddHandle = (todo: IItem) => {
-    setTodos((prevTodos) => {
-      return [
-        ...prevTodos,
-        { id: Math.random().toString(), title: todo.title },
-      ];
-    });
+    setTodos((prevTodos) => [
+      ...prevTodos,
+      { id: Math.random().toString(), title: todo.title },
+    ]);
   };
 
-  const todoRemoveHandle = (id: string) => {};
+  const todoRemoveHandle = (id: string) => {
+    setTodos((prevTodos) => prevTodos.filter((item) => item.id !== id));
+  };
 
   return (
     <div className="App">
