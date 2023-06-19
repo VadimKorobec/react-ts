@@ -3,6 +3,7 @@ import { IItem } from "../types/todo";
 
 interface IProps {
   todos: IItem[];
+  onRemoveTodo: (id: string) => void;
 }
 
 export const TodoList: React.FC<IProps> = (props) => {
