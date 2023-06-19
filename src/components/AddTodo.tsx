@@ -8,7 +8,7 @@ export const AddTodo: React.FC = () => {
       <form>
         <label>
           Add title
-          <input type="text" id="add-todo" />
+          <input type="text" id="add-todo" ref={titleInputRef} />
         </label>
         <button type="submit">Add Todo</button>
       </form>
