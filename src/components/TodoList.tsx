@@ -14,6 +14,12 @@ export const TodoList: React.FC<IProps> = (props) => {
           <li key={item.id}>
             <p>{item.id}</p>
             <p>{item.title}</p>
+            <button
+              type="button"
+              onClick={props.onRemoveTodo.bind(this, item.id)}
+            >
+              Delete Todo
+            </button>
           </li>
         ))}
       </ul>
