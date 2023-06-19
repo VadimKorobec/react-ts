@@ -9,12 +9,19 @@ interface IProps {
   todos: IItem[];
 }
 
-interface IState {
-  count: number;
-}
-
-const TodoList: React.FC = () => {
-  return <div></div>;
+const TodoList: React.FC<IProps> = (props) => {
+  return (
+    <div>
+      <ul>
+        {props.todos.map((item) => (
+          <li key={item.id}>
+            <p>{item.id}</p>
+            <p>{item.title}</p>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };
 
 export default TodoList;
