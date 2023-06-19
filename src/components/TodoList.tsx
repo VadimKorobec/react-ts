@@ -9,7 +9,7 @@ interface IProps {
   todos: IItem[];
 }
 
-const TodoList: React.FC<IProps> = (props) => {
+export const TodoList: React.FC<IProps> = (props) => {
   return (
     <div>
       <ul>
@@ -23,5 +23,3 @@ const TodoList: React.FC<IProps> = (props) => {
     </div>
   );
 };
-
-export default TodoList;
